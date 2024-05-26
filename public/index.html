@@ -7,7 +7,7 @@
         <title>Chat APP</title>
         <link rel="stylesheet" href="index.css">
     </head>
-    <body>
+    <body onload="askUser()">
         <center><img src="https://1000logos.net/wp-content/uploads/2017/08/Snapchat-Logo-2013.png" alt="" class="logo"></center>
         <h1 class="mainHeading"><i><b>Real time Chatting Application using Node</b></i></h1>
         <div class="tellname" id="tellname">
@@ -33,7 +33,12 @@
         
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script> -->
         <script>
-      const usernameN=prompt("Enter You are Name:");
+        let usernameN;
+    function askUser() {
+        prompt("Enter You are Name:") = usernameN;
+        return usernameN;
+        
+    }
       const socket = io();
       const sendBtn = document.getElementById("sendBtn");
       const messageInput = document.getElementById("message");
