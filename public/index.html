@@ -40,7 +40,12 @@
       const namearea = document.getElementById("tellname");
 
 // Ask for user's name
-const usernameN = prompt('Please enter your name:');
+window.onload = aksUser();
+    let usernameN;
+function askUser(){
+     usernameN = prompt('Please enter your name:');
+    return usernameN;
+}
 const p4 = document.getElementById("pname");
 p4.innerText =  usernameN;
 // Emit the username to the server
